@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#root {
+  display: flex;
+  width: 350px;
+  border-radius: 30px;
+  background-color: #d4d4d4;
+  justify-content: space-around;
+  align-items: center;
+}

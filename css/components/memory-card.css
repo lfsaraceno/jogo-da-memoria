@@ -1,0 +1,44 @@
+.memory-card {
+  width: 155px;
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #f25a70;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.card {
+  width: 155px;
+  height: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card > .circle-back {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 50%;
+  background-color: #d4d4d4;
+}
+
+.card .icon {
+  width: 97px;
+  height: 97px;
+  display: inline-block;
+  position: relative;
+  top: -5px;
+}
