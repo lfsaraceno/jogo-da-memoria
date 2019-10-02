@@ -1,4 +1,4 @@
-.wrap-cards {
+.wrapper-cards {
   display: flex;
   flex-wrap: wrap;
   width: 350px;
@@ -7,4 +7,5 @@
   background-color: #d4d4d4;
   justify-content: space-around;
   align-items: center;
+  margin: 30px auto;
 }
