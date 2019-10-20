@@ -94,5 +94,19 @@ const creatingMemoryCard = () => {
   `;
 };
 
-const clickCard = $component =>
-  $component.children[0].classList.toggle("-disable");
+function clickCard($component) {
+  if (qtdCardDisable < 2) {
+    $component.children[0].classList.add("-disable");
+  }
+
+  if (qtdCardDisable === 1) {
+    setTimeout(() => {
+      const $disableMemoryCard = document.querySelectorAll(".-disable");
+
+      $disableMemoryCard.forEach($memoryCard => {
+        $memoryCard.classList.remove("-disable");
+      });
+      qtdCardDisable = 0;
+    }, 1000);
+  }
+}
