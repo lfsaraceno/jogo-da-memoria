@@ -14,43 +14,40 @@ const loginForm = (function() {
         transform: translateX(-50%);
         overflow: hidden;
       }
+      `;
+    $head.insertBefore($style, null);
+  };
 
-      .login-label {
-        font-family: 'comfortaa', sans-sarif;
-        color: #fffcee;
-        margin: 5px;
-      }
-
-      .login-input {
-        width: 100%;
-        display: inline-block;
-        padding: 5px;
-        border: none;
-        border-bottom: 2px solid #fffcee;
-        font-family: 'comfortaa', sans-sarif;
-        color: #fffcee;
-        background: transparent;
-        margin: 5px;
-        margin-bottom: 20px;
-
-      }
+  module._children = () => {
+    const $labelEmail = label.render("E-mail");
+    const $labelSenha = label.render("Senha");
+    const $inputEmail = input.render({
+      id: "email",
+      type: "e-mail",
+      placeHolder: "collab@collabcode.com"
+    });
+    const $inputSenha = input.render({
+      id: "senha",
+      type: "password",
+      placeHolder: "Abcd@123"
+    });
+    return `
+      ${$labelEmail}
+      ${$inputEmail}
+      ${$labelSenha}
+      ${$inputSenha}
     
     `;
-    $head.insertBefore($style, null);
   };
 
   module.render = () => {
     module._style();
 
-    return `
-      <div class="login-form" >
-        <form>
-          <label class="login-label" for="login-email">E-mail</label>
-          <input class="login-input" id="login-email" type="text" name="name" placeHolder="user@collab.com">
-          <label class="login-label" for="login-password">Senha</label>
-          <input class="login-input" ig="login-password" type="password" name="passwoed" placeHolder="Abcd@123456">
-        </form>
-      </div> 
+    return `      
+      <form class="login-form" action="" metod="" >
+      ${module._children()}        
+      </form>
+      
     `;
   };
 

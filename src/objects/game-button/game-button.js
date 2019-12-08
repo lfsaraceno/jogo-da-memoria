@@ -7,7 +7,6 @@ const gameButton = (function() {
     .button${store.buttonId} {
       width: 50px;
       height: 50px;
-      font-family: "comfortaa", sans-serif;
       font-weight: bold;
       color: #f25a70;
       text-shadow: 0 0 2px black;  
