@@ -1,4 +1,4 @@
-const layerBackground = (function() {
+const layerLogin = (function() {
   const module = {};
 
   module._style = () => {
@@ -62,16 +62,25 @@ const layerBackground = (function() {
     $head.insertBefore($style, null);
   };
 
-  module.render = () => {
+  module._children = () => {
     const $logoCollabLogin = logoCollab.render();
     const $loginForm = loginForm.render();
     const $loginButton = loginButton.render();
+
+    return {
+      logo: $logoCollabLogin,
+      login: $loginForm,
+      button: $loginButton
+    };
+  };
+
+  module.render = () => {
     module._style();
     return `
       <div class="layer-background">
-        ${$logoCollabLogin}
+        ${module._children().logo}
         <div class="wrapper-login">
-          ${$loginForm}
+          ${module._children().login}
           <a href="#" class="forget-link">Recuperar Senha</a>
           <div class="login-media">
             <img class="login-social" src="img/icon-git.svg"/>
@@ -79,7 +88,7 @@ const layerBackground = (function() {
             <img class="login-social" src="img/icon-insta.svg"/>
           </div>
         </div>
-        ${$loginButton}        
+        ${module._children().button}        
         <a href="#" class="singup-link">Cadastrar</a>
         </div>
         `;
