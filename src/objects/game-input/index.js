@@ -1,10 +1,10 @@
-const input = (function() {
+const gameInput = (function() {
   const module = {};
   module._style = () => {
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
     $style.textContent = `
-      .input {
+      .game-input {
         width: 100%;
         display: block;
         padding: 5px;
@@ -13,7 +13,18 @@ const input = (function() {
         background: transparent;
         margin: 5px;
         margin-bottom: 20px;
-    }
+      }
+
+      .game-input:focus{        
+        outline: 0;
+      }
+
+      .game-input::placeholder {
+        color: #fffcee90;
+      }
+      .game-input:hover::placeholder {
+        color: #fffcee;
+      }
     `;
     $head.insertBefore($style, null);
   };
@@ -27,7 +38,7 @@ const input = (function() {
     module._style();
 
     return `
-      <input class="input" id=${id} type=${type} name=${name} placeHolder=${placeHolder}>
+      <input class="game-input" id=${id} type=${type} name=${name} placeHolder=${placeHolder}>
     
     `;
   };

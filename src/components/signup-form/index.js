@@ -1,4 +1,4 @@
-const loginForm = (function() {
+const signupForm = (function() {
   const module = {};
 
   module._style = () => {
@@ -7,10 +7,10 @@ const loginForm = (function() {
     $style.textContent = `
       .login-form {
         width: 310px;
-        height: 210px;
+        height: 270px;
         position: relative;
         left: 50%;
-        top: 7%;
+        top: 0;
         transform: translateX(-50%);
         overflow: hidden;
       }
@@ -19,29 +19,29 @@ const loginForm = (function() {
   };
 
   module._children = () => {
-    const $labelNome = label.render("Nome");
-    const $inputNome = input.render({
+    const $labelNome = gameLabel.render("Nome");
+    const $inputNome = gameInput.render({
       id: "name",
       type: "text",
       placeHolder: "CollabCode"
     });
 
-    const $labelEmail = label.render("E-mail");
-    const $inputEmail = input.render({
+    const $labelEmail = gameLabel.render("E-mail");
+    const $inputEmail = gameInput.render({
       id: "email",
       type: "e-mail",
       placeHolder: "collab@collabcode.com"
     });
 
-    const $labelSenha = label.render("Senha");
-    const $inputSenha = input.render({
+    const $labelSenha = gameLabel.render("Senha");
+    const $inputSenha = gameInput.render({
       id: "password",
       type: "password",
       placeHolder: "Abcd@123"
     });
 
-    const $labelRepetPassword = label.render("Repetir Senha");
-    const $inputRepetPassword = input.render({
+    const $labelRepetPassword = gameLabel.render("Repetir Senha");
+    const $inputRepetPassword = gameInput.render({
       id: "repetPassword",
       type: "password",
       placeHolder: "Abcd@123"
@@ -63,10 +63,17 @@ const loginForm = (function() {
 
     return `      
       <form class="login-form" action="" metod="" >
+      ${module._children().labelName}
+      ${module._children().inputName}
+
       ${module._children().labelEmail}
       ${module._children().inputEmail}
+
       ${module._children().labelPassword}
-      ${module._children().inputPassword}        
+      ${module._children().inputPassword}
+      
+      ${module._children().labelRepetPassword}
+      ${module._children().inputRepetPassword}
       </form>
       
     `;

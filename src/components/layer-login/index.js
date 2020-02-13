@@ -49,14 +49,7 @@ const layerLogin = (function() {
         left: 70%;
       }
 
-      .login-media {
-        width: 180px;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+      
     `;
 
     $head.insertBefore($style, null);
@@ -65,11 +58,13 @@ const layerLogin = (function() {
   module._children = () => {
     const $logoCollabLogin = logoCollab.render();
     const $loginForm = loginForm.render();
+    const $socialMedia = socialMedia.render();
     const $loginButton = loginButton.render();
 
     return {
       logo: $logoCollabLogin,
       login: $loginForm,
+      media: $socialMedia,
       button: $loginButton
     };
   };
@@ -83,9 +78,9 @@ const layerLogin = (function() {
           ${module._children().login}
           <a href="#" class="forget-link">Recuperar Senha</a>
           <div class="login-media">
-            <img class="login-social" src="img/icon-git.svg"/>
-            <img class="login-social" src="img/icon-face.svg"/>
-            <img class="login-social" src="img/icon-insta.svg"/>
+            ${module._children().media.github}
+            ${module._children().media.facebook}
+            ${module._children().media.instagran}
           </div>
         </div>
         ${module._children().button}        

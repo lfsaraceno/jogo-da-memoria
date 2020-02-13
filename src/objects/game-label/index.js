@@ -1,4 +1,4 @@
-const label = (function() {
+const gameLabel = (function() {
   const module = {};
   module._style = () => {
     const $head = document.querySelector("head");

@@ -16,6 +16,10 @@ const gameButton = (function() {
       letter-spacing: 2px;
       cursor: pointer;
     }
+
+    .button${store.buttonId}:focus {
+      outline: 0;
+    }
     `;
 
     $head.insertBefore($style, null);
