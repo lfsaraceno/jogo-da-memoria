@@ -1,6 +1,6 @@
 (function() {
   const $root = document.querySelector("#root");
-  const $layerBackground = layerBackground.render();
+  const $layerBackground = layerLogin.render();
 
   $root.insertAdjacentHTML("beforeend", $layerBackground);
 })();

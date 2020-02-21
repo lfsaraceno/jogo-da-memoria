@@ -11,8 +11,9 @@ const layerLogin = (function() {
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         background-image: linear-gradient(180deg, #f25a70 0%, #3a4042)
         
         
@@ -58,12 +59,14 @@ const layerLogin = (function() {
   module._children = () => {
     const $logoCollabLogin = logoCollab.render();
     const $loginForm = loginForm.render();
+    // const $passwordeye = eyePassword.render("password");
     const $socialMedia = socialMedia.render();
     const $loginButton = loginButton.render();
 
     return {
       logo: $logoCollabLogin,
       login: $loginForm,
+      // passwordeye: $passwordeye,
       media: $socialMedia,
       button: $loginButton
     };

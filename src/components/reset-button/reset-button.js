@@ -4,19 +4,18 @@ const resetButton = (function() {
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
     $style.textContent = `
+    
     .button${store.buttonId} {
       position: absolute;
-      width: 80px;
-      height: 60px;
       border-radius: 30px;
       border: 3px solid #f25a70;
-      color: #f25a70;
+      color: #fffcee;
       font-family: 'comfortaa', sans-sarif;
-      top: 5%;
+      top: 7%;
       left: 50%;
-      letter-spacing: 2px;
+      letter-spacing: 0.1em;
       font-size: 14px;
-      background: transparent;
+      background: #3a4042;
       transform: translateX(-50%);
     }
     `;

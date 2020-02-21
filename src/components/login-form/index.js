@@ -19,33 +19,35 @@ const loginForm = (function() {
   };
 
   module._children = () => {
-    const $labelNome = label.render("Nome");
-    const $inputNome = input.render({
+    const $labelNome = gameLabel.render("Nome");
+    const $inputNome = gameInput.render({
       id: "name",
       type: "text",
       placeHolder: "CollabCode"
     });
 
-    const $labelEmail = label.render("E-mail");
-    const $inputEmail = input.render({
+    const $labelEmail = gameLabel.render("E-mail");
+    const $inputEmail = gameInput.render({
       id: "email",
       type: "e-mail",
       placeHolder: "collab@collabcode.com"
     });
 
-    const $labelSenha = label.render("Senha");
-    const $inputSenha = input.render({
+    const $labelSenha = gameLabel.render("Senha");
+    const $inputSenha = gameInput.render({
       id: "password",
       type: "password",
       placeHolder: "Abcd@123"
     });
 
-    const $labelRepetPassword = label.render("Repetir Senha");
-    const $inputRepetPassword = input.render({
+    const $labelRepetPassword = gameLabel.render("Repetir Senha");
+    const $inputRepetPassword = gameInput.render({
       id: "repetPassword",
       type: "password",
       placeHolder: "Abcd@123"
     });
+
+    const $eyepassword = eyePassword.render("password");
     return {
       labelName: $labelNome,
       inputName: $inputNome,
@@ -54,7 +56,8 @@ const loginForm = (function() {
       labelPassword: $labelSenha,
       inputPassword: $inputSenha,
       labelRepetPassword: $labelRepetPassword,
-      inputRepetPassword: $inputRepetPassword
+      inputRepetPassword: $inputRepetPassword,
+      eyePassword: $eyepassword
     };
   };
 
@@ -66,7 +69,8 @@ const loginForm = (function() {
       ${module._children().labelEmail}
       ${module._children().inputEmail}
       ${module._children().labelPassword}
-      ${module._children().inputPassword}        
+      ${module._children().inputPassword} 
+      ${module._children().eyePassword}       
       </form>
       
     `;

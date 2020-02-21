@@ -11,8 +11,9 @@ const layersignup = (function() {
         display: flex;
         flex-wrap: wrap;
         position: relative;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         background-image: linear-gradient(180deg, #f25a70 0%, #3a4042)    
       }
 

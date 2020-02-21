@@ -14,13 +14,14 @@ const startButton = (function() {
       transform: translate(-50%, -50%);
     }
 
-    .start-button > .button {
+    .button${store.buttonId} {
       width: 90px;
       height: 90px;
       border: 4px solid #fffcee;
       border-radius: 50%;
       font-size: 1.5em;
-      box-shadow: 0 0px 6px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.5);
+      background: #3a4042;
     }
     `;
     $head.insertBefore($style, null);
