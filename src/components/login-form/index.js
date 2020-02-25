@@ -7,7 +7,7 @@ const loginForm = (function() {
     $style.textContent = `
       .login-form {
         width: 310px;
-        height: 210px;
+        height: 270px;
         position: relative;
         left: 50%;
         top: 7%;
@@ -47,7 +47,7 @@ const loginForm = (function() {
       placeHolder: "Abcd@123"
     });
 
-    const $eyepassword = eyePassword.render("password");
+    const $eyepassword = eyePassword().render({ attrFor: "password" });
     return {
       labelName: $labelNome,
       inputName: $inputNome,

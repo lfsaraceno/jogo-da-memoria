@@ -9,12 +9,13 @@ const gameButton = (function() {
       height: 50px;
       font-weight: bold;
       color: #f25a70;
-      text-shadow: 0 0 2px black;  
       border: 2px solid #f25a70;
       box-sizing: content-box;
       border-radius: 50%;
       letter-spacing: 2px;
+      text-transform: uppercase;
       cursor: pointer;
+      
     }
 
     .button${store.buttonId}:focus {

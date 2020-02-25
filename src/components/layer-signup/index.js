@@ -14,21 +14,23 @@ const layersignup = (function() {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-image: linear-gradient(180deg, #f25a70 0%, #3a4042)    
+        background-image: linear-gradient(180deg, #f25a70 30%, #3a4042)    
       }
 
       .title-login {
         width: 100%;
+        height: 40px;
         display: inline-block;
         color: #3a4042;
         position: relative;
         bottom: 270px;
         text-align: center;
+        line-height: 40px;
 
       }
       .wrapper-signup {
         width: 100%;
-        height: 40%;
+        height: 45%;
         display: flex;
         flex-wrap: wrap;
         overflow: hidden;
@@ -42,7 +44,7 @@ const layersignup = (function() {
 
   module._children = () => {
     const $logoCollabLogin = logoCollab.render();
-    const $signupForm = signupForm.render();
+    const $signupForm = signupForm().render();
     const $signupButton = signupButton.render();
 
     return {

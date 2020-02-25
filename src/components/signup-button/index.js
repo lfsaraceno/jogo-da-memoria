@@ -19,13 +19,14 @@ const signupButton = (function() {
         font-size:16px;
         background: transparent;
         transform: translateX(-50%);
+        transition: border 200ms linear, color 200ms linear;
       }
 
       .button${store.buttonId}:hover {
-        text-shadow: 0 0 5px #f25a70;
-        box-shadow: inset 0 0 12px #f25a70;
-
-
+        border: 3px solid #fffcee;
+        color: #fffcee;
+        
+        
       }
       
     
@@ -34,16 +35,22 @@ const signupButton = (function() {
   };
 
   module.render = () => {
-    const $signupButton = gameButton.render("Sign Up");
+    const $signupButton = gameButton.render("Enviar");
     module._style();
     return `
-    <div class="login-button">
+    <div onClick="signupButton.handleClick(this)" class="login-button">
     ${$signupButton}
     </div>
     
     `;
   };
+
+  module.handleClick = () => {
+    window.location.hash = "";
+  };
+
   return {
-    render: module.render
+    render: module.render,
+    handleClick: module.handleClick
   };
 })();

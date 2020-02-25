@@ -14,7 +14,7 @@ const layerLogin = (function() {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-image: linear-gradient(180deg, #f25a70 0%, #3a4042)
+        background-image: linear-gradient(180deg, #f25a70 30%, #3a4042)
         
         
       
@@ -50,7 +50,27 @@ const layerLogin = (function() {
         left: 70%;
       }
 
+      .login-media {
+        width: 230px;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        left: 50%;
+        transform: translateX(-50%);
+        align-items: center;
+      }
+
+      .login-media > * {
+        cursor: pointer;
+      }
       
+      .login-social:hover {
+        width: 36px;
+        height: 36px;
+        background: #3a4042;
+        background-size: cover;
+        border-radius: 50%;
+      }
     `;
 
     $head.insertBefore($style, null);
@@ -59,14 +79,12 @@ const layerLogin = (function() {
   module._children = () => {
     const $logoCollabLogin = logoCollab.render();
     const $loginForm = loginForm.render();
-    // const $passwordeye = eyePassword.render("password");
     const $socialMedia = socialMedia.render();
     const $loginButton = loginButton.render();
 
     return {
       logo: $logoCollabLogin,
       login: $loginForm,
-      // passwordeye: $passwordeye,
       media: $socialMedia,
       button: $loginButton
     };
@@ -87,7 +105,7 @@ const layerLogin = (function() {
           </div>
         </div>
         ${module._children().button}        
-        <a href="#" class="singup-link">Cadastrar</a>
+        <a href="#/signup" class="singup-link">Cadastrar</a>
         </div>
         `;
   };

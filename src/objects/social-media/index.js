@@ -4,23 +4,16 @@ const socialMedia = (function() {
     const $head = document.querySelector("head");
     const $style = document.createElement("style");
     $style.textContent = `
-      .login-media {
-        width: 230px;
-        position: relative;
-        display: flex;
-        justify-content: space-around;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+      
       `;
 
     $head.insertBefore($style, null);
   };
   module.render = () => {
-    module._style();
-    const $github = `<img class="login-social" src="img/icon-git.svg"/>`;
-    const $facebook = `<img class="login-social" src="img/icon-face.svg"/>`;
-    const $instagran = `<img class="login-social" src="img/icon-insta.svg"/>`;
+    // module._style();
+    const $github = `<a href="http://github.com" target="_blank" ><img class="login-social" src="img/icon-git.svg"/></a>`;
+    const $facebook = `<a href="http://www.facebook.com" target="_blank" ><img class="login-social" src="img/icon-face.svg"/></a>`;
+    const $instagran = `<a href="http://www.instagram.com" target="_blank" ><img class="login-social" src="img/icon-insta.svg"/></a>`;
 
     return {
       github: $github,

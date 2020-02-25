@@ -20,6 +20,12 @@ const loginButton = (function() {
         background: transparent;
         transform: translateX(-50%);
       }
+
+      .button${store.buttonId}:hover {
+        border: 3px solid #fffcee;
+        color: #fffcee;
+      
+      }
       
     
     `;
@@ -27,16 +33,22 @@ const loginButton = (function() {
   };
 
   module.render = () => {
-    const logInButton = gameButton.render("Login");
+    const logInButton = gameButton.render("Entrar");
     module._style();
     return `
-    <div class="login-button">
+    <div class="login-button" onClick="loginButton.handleClick(this)">
     ${logInButton}
     </div>
     
     `;
   };
+
+  module.handleClick = () => {
+    window.location.hash = "/game";
+  };
+
   return {
-    render: module.render
+    render: module.render,
+    handleClick: module.handleClick
   };
 })();
