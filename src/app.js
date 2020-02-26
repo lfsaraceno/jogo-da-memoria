@@ -1,5 +1,5 @@
 (function() {
-  const { hash } = window.location;
+  const { hash } = location;
 
   const paths = [];
   paths[""] = login;

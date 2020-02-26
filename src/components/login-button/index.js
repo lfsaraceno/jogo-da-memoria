@@ -25,9 +25,7 @@ const loginButton = (function() {
         border: 3px solid #fffcee;
         color: #fffcee;
       
-      }
-      
-    
+      }    
     `;
     $head.insertBefore($style, null);
   };
@@ -44,7 +42,8 @@ const loginButton = (function() {
   };
 
   module.handleClick = () => {
-    window.location.hash = "/game";
+    location.hash = "/game";
+    location.reload(true);
   };
 
   return {

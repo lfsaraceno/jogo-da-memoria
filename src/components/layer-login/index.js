@@ -89,6 +89,10 @@ const layerLogin = (function() {
       button: $loginButton
     };
   };
+  module.handleClick = () => {
+    location.hash = "/signup";
+    location.reload(true);
+  };
 
   module.render = () => {
     module._style();
@@ -105,11 +109,12 @@ const layerLogin = (function() {
           </div>
         </div>
         ${module._children().button}        
-        <a href="#/signup" class="singup-link">Cadastrar</a>
+        <a href="#" onClick="layerLogin.handleClick(this)" class="singup-link">Cadastrar</a>
         </div>
         `;
   };
   return {
-    render: module.render
+    render: module.render,
+    handleClick: module.handleClick
   };
 })();

@@ -10,5 +10,4 @@ const page404 = function() {
   $root.insertBefore($style, null);
 
   $root.insertAdjacentHTML("beforeend", `<h1 class="page404" >404</h1>`);
-  console.log(`Foi ${$root}`);
 };

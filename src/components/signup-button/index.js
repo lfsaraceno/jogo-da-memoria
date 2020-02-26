@@ -46,7 +46,8 @@ const signupButton = (function() {
   };
 
   module.handleClick = () => {
-    window.location.hash = "";
+    location.hash = "";
+    location.reload(true);
   };
 
   return {
