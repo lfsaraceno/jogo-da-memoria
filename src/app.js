@@ -6,7 +6,13 @@
   paths["#/login"] = login;
   paths["#/signup"] = signup;
   paths["#/game"] = game;
-  paths["#/status404"] = status404;
+  paths["#/404"] = page404;
 
+  if (paths[hash] === undefined) {
+    paths["#/404"]();
+    return;
+  }
   paths[hash]();
+
+  console.log(paths[hash]);
 })();
