@@ -17,11 +17,11 @@ const startButton = (function() {
     .button${store.buttonId} {
       width: 90px;
       height: 90px;
-      border: 4px solid #fffcee;
       border-radius: 50%;
-      font-size: 1.5em;
-      box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.5);
+      font-size: 1.2em;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.5);
       background: #3a4042;
+      margin: 3px;
     }
     `;
     $head.insertBefore($style, null);

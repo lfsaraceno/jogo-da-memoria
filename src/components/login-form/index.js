@@ -14,6 +14,9 @@ const loginForm = (function() {
         transform: translateX(-50%);
         overflow: hidden;
       }
+      .login-form .eye-password {
+        top: -16%;
+      }
       `;
     $head.insertBefore($style, null);
   };

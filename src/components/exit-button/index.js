@@ -1,4 +1,4 @@
-const resetButton = (function() {
+const exitButton = (function() {
   const module = {};
   module._style = () => {
     const $head = document.querySelector("head");
@@ -12,29 +12,30 @@ const resetButton = (function() {
       color: #fffcee;
       font-family: 'comfortaa', sans-sarif;
       top: 7%;
-      right: 7px;
+      left: 5%;
       letter-spacing: 0.1em;
       font-size: 0.7em;
       background: #3a4042;
-      
     }
     `;
     $head.insertBefore($style, null);
   };
   module.render = () => {
-    const $buttonReset = gameButton.render("reset");
+    const $buttonExit = gameButton.render("exit");
     module._style();
 
     return `
-      <div class="resetbutton" onClick="resetButton.handleClick()">
-        ${$buttonReset}
+      <div class="exitbutton" 
+        onClick="exitButton.handleClick()">
+          ${$buttonExit}
       </div>
     
     `;
   };
 
   module.handleClick = () => {
-    window.location.reload();
+    location.hash = "#/login";
+    location.reload();
   };
   return {
     render: module.render,
