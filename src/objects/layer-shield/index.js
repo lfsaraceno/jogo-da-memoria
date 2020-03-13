@@ -12,7 +12,6 @@ const layerShield = (function() {
         height: 100%;
         display: block;
         position: absolute;
-        border-radius: 30px;
         background-image: linear-gradient(#000, #82828260, #000);
         z-index: 1;
         transition: opacity 300ms linear;
@@ -20,8 +19,7 @@ const layerShield = (function() {
       }
       .button${store.buttonId} {
         position: absolute;
-        border-radius: 30px;
-        border: 2px solid #fffcee;
+        border: 2px solid;
         color: #fffcee;
         font-family: 'comfortaa', sans-sarif;
         top: 90%;
@@ -29,7 +27,7 @@ const layerShield = (function() {
         transform: translateX(-50%);
         letter-spacing: 0.1em;
         font-size: 0.7em;
-        background: #3a4042;
+        background: none;
         z-index: 9;
       }    
     `;

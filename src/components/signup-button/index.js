@@ -35,7 +35,9 @@ const signupButton = (function() {
   };
 
   module.render = () => {
-    const $signupButton = gameButton.render("Enviar");
+    const $signupButton = gameButton.render({
+      onClick: "signupButton.handleClick(this)"
+    });
     module._style();
     return `
     <div onClick="signupButton.handleClick(this)" class="login-button">

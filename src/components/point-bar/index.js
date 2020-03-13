@@ -41,7 +41,8 @@ const pointBar = (function() {
           display: block;
           position: relative;
           background-color: #d4d4d4;
-          border-radius: 75px;
+          border-radius: 30px;
+          top: 10px;
           
         }
     `;

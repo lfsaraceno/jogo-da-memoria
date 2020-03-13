@@ -12,7 +12,6 @@
     paths["#/404"]();
     return;
   }
-  paths[hash]();
 
-  console.log(paths[hash]);
+  paths[hash]();
 })();

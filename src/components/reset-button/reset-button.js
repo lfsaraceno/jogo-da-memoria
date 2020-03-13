@@ -6,15 +6,16 @@ const resetButton = (function() {
     $style.textContent = `
     
     .button${store.buttonId} {
+      width: 45px;
+      height: 45px;
       position: absolute;
-      border-radius: 30px;
-      border: 3px solid #f25a70;
+      border-radius: 25px;
       color: #fffcee;
       font-family: 'comfortaa', sans-sarif;
-      top: 7%;
+      top: 5%;
       right: 7px;
       letter-spacing: 0.1em;
-      font-size: 0.7em;
+      font-size: 0.6em;
       background: #3a4042;
       
     }
@@ -22,14 +23,14 @@ const resetButton = (function() {
     $head.insertBefore($style, null);
   };
   module.render = () => {
-    const $buttonReset = gameButton.render("reset");
+    const $buttonReset = gameButton.render({
+      component: "Reset",
+      onClick: "resetButton.handleClick()"
+    });
     module._style();
 
-    return `
-      <div class="resetbutton" onClick="resetButton.handleClick()">
-        ${$buttonReset}
-      </div>
-    
+    return `      
+      ${$buttonReset}    
     `;
   };
 

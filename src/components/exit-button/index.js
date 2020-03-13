@@ -6,9 +6,10 @@ const exitButton = (function() {
     $style.textContent = `
     
     .button${store.buttonId} {
+      width: 45px;
+      height: 45px;
       position: absolute;
-      border-radius: 30px;
-      border: 3px solid #f25a70;
+      border-radius: 25px;
       color: #fffcee;
       font-family: 'comfortaa', sans-sarif;
       top: 7%;
@@ -21,15 +22,14 @@ const exitButton = (function() {
     $head.insertBefore($style, null);
   };
   module.render = () => {
-    const $buttonExit = gameButton.render("exit");
+    const $buttonExit = gameButton.render({
+      component: "Exit",
+      onClick: "exitButton.handleClick()"
+    });
     module._style();
 
     return `
-      <div class="exitbutton" 
-        onClick="exitButton.handleClick()">
-          ${$buttonExit}
-      </div>
-    
+      ${$buttonExit}    
     `;
   };
 
