@@ -109,7 +109,7 @@ const layerLogin = (function() {
           </div>
         </div>
         ${module._children().button}        
-        <a href="#" onClick="layerLogin.handleClick(this)" class="singup-link">Cadastrar</a>
+        <a href="#/signup" onClick="layerLogin.handleClick(this)" class="singup-link">Cadastrar</a>
         </div>
         `;
   };
