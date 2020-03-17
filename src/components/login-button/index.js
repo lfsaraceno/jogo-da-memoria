@@ -59,7 +59,6 @@ const loginButton = (function() {
     if (validEmail($email) === true && validPassword($password) === true) {
       if ($email === "collab@collabcode.com" && $password === "Abcd@123") {
         location.hash = "/game";
-        // location.reload();
       } else {
         alert("Email ou Senha incorreto! Por Favor tente novamente.");
       }

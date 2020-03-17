@@ -91,7 +91,6 @@ const layerLogin = (function() {
   };
   module.handleClick = () => {
     location.hash = "/signup";
-    location.reload(true);
   };
 
   module.render = () => {
